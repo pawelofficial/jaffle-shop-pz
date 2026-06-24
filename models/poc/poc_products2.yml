@@ -1,0 +1,6 @@
+models:
+  - name: poc_products2
+    columns:
+      - name: product_name
+        data_tests:
+          - is_alphanumeric

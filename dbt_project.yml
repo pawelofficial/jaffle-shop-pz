@@ -38,3 +38,6 @@ models:
     marts:
       +schema: marts
       +materialized: table
+    poc:
+      +schema: marts
+      +materialized: table
