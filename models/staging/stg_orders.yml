@@ -1,9 +1,31 @@
 models:
   - name: stg_orders
     description: Order data with basic cleaning and transformation applied, one row per order.
+    data_tests:
+      - model_exists 
     columns:
       - name: order_id
         description: The unique key for each order.
         data_tests:
           - not_null
           - unique
+      - name: subtotal_cents
+        description: tbd
+        data_tests:
+          - is_positive
+      - name: tax_paid_cents
+        description: tbd
+        data_tests:
+          - is_positive
+      - name: order_total_cents
+        description: tbd
+        data_tests:
+          - is_positive
+      - name: subtotal
+        description: tbd
+        data_tests:
+          - is_positive
+      - name: tax_paid
+        description: tbd
+        data_tests:
+          - is_positive
