@@ -1,0 +1,20 @@
+selectors:
+  - name: marts
+    description: "Marts models tagged nightly, plus their tests"
+    definition:
+      union:
+        - method: path
+          value: models/marts
+        - method: path
+          value: models/poc
+
+  - name: stg
+    default: false          # used when no --select/--selector is passed
+    definition:
+      method: path
+      value: models/staging
+  
+# operators 
+# union -> or  
+# intersection -> and 
+# exclude -> substracts 
