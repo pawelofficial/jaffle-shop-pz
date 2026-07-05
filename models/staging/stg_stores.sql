@@ -9,5 +9,5 @@ renamed as (
 )
 select * from renamed
 {% if is_incremental() %}
-where id not in (select supply_uuid from {{ this }} ) 
+where id not in (select id from {{ this }} ) 
 {% endif %}
