@@ -1,0 +1,7 @@
+models:
+  - name: dt_products
+    config:
+      schema: staging
+      materialized: dynamic_table
+      target_lag: '1 hour'
+      snowflake_warehouse: compute_wh
