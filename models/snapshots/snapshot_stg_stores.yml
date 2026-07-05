@@ -1,0 +1,10 @@
+snapshots:
+  - name: snapshot_stg_stores
+    relation: ref('stg_stores')
+    config:
+      schema: staging
+      unique_key: id
+      strategy: check 
+      check_cols:
+       - name
+ 

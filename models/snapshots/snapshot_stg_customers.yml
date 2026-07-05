@@ -1,0 +1,10 @@
+snapshots:
+  - name: snapshot_stg_customers
+    relation: ref('stg_customers')
+    config:
+      schema: staging
+      unique_key: customer_id
+      strategy: check 
+      check_cols:
+       - customer_name
+ 

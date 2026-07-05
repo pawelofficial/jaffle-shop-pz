@@ -1,0 +1,14 @@
+snapshots:
+  - name: snapshot_stg_products
+    relation: ref('stg_products')
+    config:
+      schema: staging
+      unique_key: product_id
+      strategy: check 
+      check_cols:
+       - product_name 
+       - product_type 
+       - product_description 
+       - product_price 
+       - is_food_item 
+       - is_drink_item

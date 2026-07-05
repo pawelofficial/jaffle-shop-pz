@@ -1,16 +1,10 @@
 with
-
 products as (
-
-    select * from {{ ref('stg_products') }}
-
+    select * from {{ ref('snapshot_stg_products') }}  where dbt_valid_to is null 
 )
-
 select 
 product_id
-,upper(product_name) as product_name
---,product_name
+product_name
 ,product_type
 ,product_description
-
  from products
